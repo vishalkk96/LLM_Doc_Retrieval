@@ -1,6 +1,6 @@
 # LLM_Doc_Retrieval
 Voyage-AI LLM embedded document search
-*Reach out to me with any suggestions/questions on LinkedIN (https://www.linkedin.com/in/vishalkannan/)
+_Reach out to me with any suggestions/questions on LinkedIN (https://www.linkedin.com/in/vishalkannan/) _
 
 ## INTRODUCTION
 
@@ -85,14 +85,14 @@ An organization can reliably manage their documents and leverage their knowledge
 ![](Baseline_Risk_Matrix.png)
 
 2.	For each risk statement in the training dataset:
-•	Generate the vector embeddings using voyage ai
-•	Calculate the cosine similarity with each risk factor embedding
-•	Calculate the cosine similarity with each risk category embedding
+-	Generate the vector embeddings using voyage ai
+-	Calculate the cosine similarity with each risk factor embedding
+-	Calculate the cosine similarity with each risk category embedding
 3.	Using the complete search functionality rank the factors by distance. These are the real ranks.
 4.	Using the matrix search functionality rank the factors by distance. These are the calculated ranks.
-•	Multiply the baseline cosine similarity matrix with the cosine similarity scores between the risk statement and risk category embeddings
-•	Identify the column with the maximum closeness score from the product for each risk factor and select the closeness score
-•	Select the maximum closeness score for each risk factor and determine the calculated ranks for each risk factor
+-	Multiply the baseline cosine similarity matrix with the cosine similarity scores between the risk statement and risk category embeddings
+-	Identify the column with the maximum closeness score from the product for each risk factor and select the closeness score
+-	Select the maximum closeness score for each risk factor and determine the calculated ranks for each risk factor
 5.	Develop a mathematical model (cvxpy library) to modify the baseline cosine similarity matrix to equalize the real ranks and calculated ranks for the first 10 ranks
 
 ![](Math_Model.png)

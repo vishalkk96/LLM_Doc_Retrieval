@@ -1,6 +1,7 @@
 # LLM_Doc_Retrieval
 Voyage-AI LLM embedded document search
-_Reach out to me with any suggestions/questions on LinkedIN (https://www.linkedin.com/in/vishalkannan/) _
+
+*Reach out to me with any suggestions/questions on LinkedIN* (https://www.linkedin.com/in/vishalkannan/)
 
 ## INTRODUCTION
 
@@ -13,14 +14,14 @@ An end user (employee of a company) describes a specific risk faced by his/her c
 The Voyage AI embedder is used to embed the risk factors and the cosine similarity distance metric is used to identify the closest risk factors to a given risk statement input. The solution should be trainable and fine-tuneable by end users and the result will be assessed both for it’s accuracy and computation time.
 
 ## OBJECTIVES
-•	Develop a complete retrieval functionality using cosine similarities against each Risk Factor
-•	Develop a quick retrieval functionality with the ability to finetune the output 
-•	Compare the quick and complete retrieval processes on accuracy/ time for an input text prompt
+-	Develop a complete retrieval functionality using cosine similarities against each Risk Factor
+-	Develop a quick retrieval functionality with the ability to finetune the output 
+-	Compare the quick and complete retrieval processes on accuracy/ time for an input text prompt
 
 ## DATA PREP
-•	Vectorizing and storage of the risk factors found in the IPO documents in a vector database (csv)
-•	Detailed description, vectorizing and storage of commonly understood risk categories
-•	Finetuned distance matrix construction between the risk factors and risk categories  
+-	Vectorizing and storage of the risk factors found in the IPO documents in a vector database (csv)
+-	Detailed description, vectorizing and storage of commonly understood risk categories
+-	Finetuned distance matrix construction between the risk factors and risk categories  
 
 **Risk Factors**
 

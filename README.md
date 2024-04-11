@@ -1,5 +1,6 @@
 # LLM_Doc_Retrieval
 Voyage-AI LLM embedded document search
+*Reach out to me with any suggestions/questions on LinkedIN (https://www.linkedin.com/in/vishalkannan/)
 
 ## INTRODUCTION
 
@@ -99,3 +100,5 @@ An organization can reliably manage their documents and leverage their knowledge
 6.	Replace the old baseline cosine similarity matrix values with the variables from the mathematical model
 7.	Move on to the next risk statement in the training dataset
 8.	For this project, each IPO risk statement was used to fine-tune the baseline cosine similarity matrix
+
+**The Filenames column lists out the files to look into in the IPO Docs folder**

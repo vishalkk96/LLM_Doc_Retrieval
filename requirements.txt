@@ -1,0 +1,13 @@
+numpy==1.24.1
+json
+pandas==1.5.2
+scipy==1.10.0
+sklearn
+plotly==5.19.0
+ast
+voyageai==0.1.7
+time
+rouge==1.0.1
+matplotlib==3.6.2
+matplotlib_venn==0.11.10
+math

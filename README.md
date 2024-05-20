@@ -22,18 +22,14 @@ An end user (employee of a company) describes a specific risk faced by his/her c
 
 ## BI-ENCODER SIMILARITY
 
-![](Similarity_Base.png)
-
 The Voyage AI embedder is used to embed the risk factors and the cosine similarity distance metric is used to identify the closest risk factors to a given risk statement input. The solution should be trainable and fine-tuneable by end users and the result will be assessed both for it’s accuracy and computation time.
 
-![](Similarity_Matrix.png)
-
-## OBJECTIVES
+### OBJECTIVES
 -	Develop a complete retrieval functionality using cosine similarities against each Risk Factor
 -	Develop a quick retrieval functionality with the ability to finetune the output 
 -	Compare the quick and complete retrieval processes on accuracy/ time for an input text prompt
 
-## DATA PREP
+### DATA PREP
 -	Vectorizing and storage of the risk factors found in the IPO documents in a vector database (csv)
 -	Detailed description, vectorizing and storage of commonly understood risk categories
 -	Finetuned distance matrix construction between the risk factors and risk categories  
@@ -50,13 +46,17 @@ The Voyage AI embedder is used to embed the risk factors and the cosine similari
 
 ![](Finetuned_Risk_Matrix.png)
 
-## RETRIEVAL ALGORITHMS
+### RETRIEVAL ALGORITHMS
+
+![](Similarity_Base.png)
 
 **Complete Search Algorithm**
 1.	User inputs the risk description 
 2.	Vectorize the risk description using the voyage-ai embedder
 3.	Calculate the cosine similarity between the risk embedding and each embedding in the risk factors database (~8,000 Risk Factors)
 4.	Select the 10 closest risk factors and record the time taken for the complete search function
+
+![](Similarity_Matrix.png)
 
 **Matrix Search Algorithm**
 1.	User inputs the risk description 
@@ -90,7 +90,7 @@ Combining the best of both worlds
 
 ![](Perf_Metrics.png)
 
-**CONCLUSION**
+**Takeaways**
 
 An organization can reliably manage their documents and leverage their knowledge base by building an LLM powered retrieval engine. The model will need periodic updates to the text data stored in the vector database and semi-regular fine tuning depending on the feedback from the end users.
 

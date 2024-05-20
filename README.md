@@ -17,7 +17,16 @@ Organizations across industries collect and author a lot of data in the form of 
 An end user (employee of a company) describes a specific risk faced by his/her company. Out of the risk factors listed in public IPO filings from the past, find the 10 semantically closest risk factors to the one described.
 
 ## SOLUTION DESIGN
+
+![](Retriever_High_Level.png)
+
+## BI-ENCODER SIMILARITY
+
+![](Similarity_Base.png)
+
 The Voyage AI embedder is used to embed the risk factors and the cosine similarity distance metric is used to identify the closest risk factors to a given risk statement input. The solution should be trainable and fine-tuneable by end users and the result will be assessed both for it’s accuracy and computation time.
+
+![](Similarity_Matrix.png)
 
 ## OBJECTIVES
 -	Develop a complete retrieval functionality using cosine similarities against each Risk Factor
@@ -41,7 +50,7 @@ The Voyage AI embedder is used to embed the risk factors and the cosine similari
 
 ![](Finetuned_Risk_Matrix.png)
 
-##RETRIEVAL ALGORITHMS
+## RETRIEVAL ALGORITHMS
 
 **Complete Search Algorithm**
 1.	User inputs the risk description 

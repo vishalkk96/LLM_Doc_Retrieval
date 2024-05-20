@@ -1,5 +1,6 @@
-# LLM_Doc_Retrieval
-Voyage-AI LLM embedded document search
+# Advanced RAG of IPO Risk Factors
+
+Voyage-AI LLM embedded document search and BGE reranker
 
 *Reach out to me with any suggestions/questions on LinkedIN* (https://www.linkedin.com/in/vishalkannan/)
 
@@ -96,8 +97,11 @@ Combining the best of both worlds
 
 ## CROSS-ENCODER SIMILARITY
 
+![](Cross_Encoder.png)
 
-## FINE-TUNING HEURISTIC
+**The semantically closest risk factors (and their metadata) is available for review**
+
+## FINE-TUNING HEURISTIC (Matrix-Search Input)
 
 1.	**Initialize Baseline Cosine Similarity Matrix**
 
@@ -139,5 +143,3 @@ Combining the best of both worlds
 9.	**Fine-Tuning over the Dataset**
 	
 	Move to the next risk statement in the training dataset and repeat the process (steps 4-9) for each risk statement to iteratively fine-tune the baseline cosine similarity matrix.
-
-**The Filenames column lists out the files to look into in the IPO Docs folder**

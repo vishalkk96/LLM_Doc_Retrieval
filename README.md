@@ -97,24 +97,31 @@ Combining the best of both worlds
 ## CROSS-ENCODER SIMILARITY
 
 1.	**Initialize Baseline Cosine Similarity Matrix**
+
 	Calculate the cosine similarities between the embeddings of Risk Factors and Risk Categories to form the baseline cosine similarity matrix.
 
 2.	**Determine Real Ranks**
+
 	Use the complete search functionality to rank the Risk Factors based on their distances to Risk Categories. These ranks represent the ground truth or real ranks.
 
 3.	**Determine Initial Calculated Ranks**
+
 	Use the matrix search functionality to rank the Risk Factors by distance using the initial baseline cosine similarity matrix. These are the initial calculated ranks.
 
 4.	**Compute Closeness Scores**
+
 	Multiply the baseline cosine similarity matrix with the cosine similarity scores between the risk statement embeddings and risk category embeddings.
 
 5.	**Identify Maximum Closeness Scores**
+
 	For each Risk Factor, identify the column (Risk Category) with the maximum closeness score and select this score.
 
 6.	**Determine Calculated Ranks**
+
 	Select the maximum closeness score for each Risk Factor to determine the calculated ranks.
 
 7.	**Optimization Model**
+
 -	Use gradient descent or a similar optimization technique to solve the optimization problem.
 -	A mathematical optimization model is developed using the cvxpy library to adjust the baseline cosine similarity matrix.
 -	The goal is to minimize the difference between the real ranks and calculated ranks for the top 10 ranks.
@@ -123,13 +130,12 @@ Combining the best of both worlds
 ![](Math_Model.png)
 
 8.	**Update Baseline Cosine Similarity Matrix**
+
 	Replace the old baseline cosine similarity matrix values with the optimized variables obtained from the mathematical model.
 
-9.	**Iterate Over Training Dataset**
+9.	**Fine-Tuning over the Dataset**
+	
 	Move to the next risk statement in the training dataset and repeat the process (steps 4-9) for each risk statement to iteratively fine-tune the baseline cosine similarity matrix.
-
-10.	**Fine-Tuning**
-	Continuously fine-tune the baseline cosine similarity matrix for each IPO risk statement in the training dataset, ensuring that the calculated ranks increasingly match the real ranks over iterations.
 
 **FINE-TUNING HEURISTIC**
 

@@ -19,19 +19,23 @@ An end user (employee of a company) describes a specific risk faced by his/her c
 
 ## SOLUTION DESIGN
 
+The Risk Factor summary statemtents (in bold and numbered) available in each IPO document are extracted and analyzed
+
+![](Graphics/RF_Text_Extract.png)
+
 Risk Factors word count distribution
 
-![](Risks_Words_Count.png)
+![](Graphics/Risks_Words_Count.png)
 
 Utilizing LDA and drilling down further, the distribution of all the latent topics in the risk factors
 
-![](Risks_Topics_Count.png)
+![](Graphics/Risks_Topics_Count.png)
 
 There's a wide variance in the verbosity of the risk factors. It has been observed that verbose risk factors are more likely to be retrieved for a query (false-positives).
 
 A fine-tunable semantic layer is necessary to ensure that the false positives can be mitigated through training.
 
-![](Retriever_High_Level.png)
+![](Graphics/Retriever_High_Level.png)
 
 ## BI-ENCODER SIMILARITY
 
@@ -53,21 +57,21 @@ This allows the end users to understand the intrinsic biases and behaviors built
 
 **Risk Factors**
 
-![](Risk_Factors.png)
+![](Graphics/Risk_Factors.png)
 
 **Risk Categories**
 
-![](Risk_Categories.png)
+![](Graphics/Risk_Categories.png)
 
 **Finetuned Risk Matrix**
 
-![](Finetuned_Risk_Matrix.png)
+![](Graphics/Finetuned_Risk_Matrix.png)
 
 **Search ALGORITHMS**
 
 **Complete Search Algorithm**
 
-![](Similarity_Base.png)
+![](Graphics/Similarity_Base.png)
 
 1.	User inputs the risk description 
 2.	Vectorize the risk description using the voyage-ai embedder
@@ -76,13 +80,13 @@ This allows the end users to understand the intrinsic biases and behaviors built
 
 **Matrix Search Algorithm**
 
-![](Similarity_Matrix.png)
+![](Graphics/Similarity_Matrix.png)
 
 1.	User inputs the risk description 
 2.	Vectorize the risk description using the voyage-ai embedder
 3.	Calculate the cosine similarity between the risk embedding and each embedding in the risk categories database (17 Risk Categories)
 
-![](Spider_Chart.png)
+![](Graphics/Spider_Chart.png)
 
 4.	Multiply the Finetuned risk matrix with the cosine similarity values from the previous step (multiply same column names together)
 5.	Select the max similarity for each risk statement among the Risk Columns as the closeness score
@@ -92,7 +96,7 @@ This allows the end users to understand the intrinsic biases and behaviors built
 
 Combining the best of both worlds
 
-![](Hybrid_Algo.png)
+![](Graphics/Hybrid_Algo.png)
 
 **PERFORMANCE METRICS**
 
@@ -107,11 +111,11 @@ Combining the best of both worlds
 1.	Record the time taken to execute both forms of search (matrix, complete and hybrid search)
 2.	Plot the time taken on a graph
 
-![](Perf_Metrics.png)
+![](Graphics/Perf_Metrics.png)
 
 ## CROSS-ENCODER SIMILARITY
 
-![](Cross_Encoder.png)
+![](Graphics/Cross_Encoder.png)
 
 **The semantically closest risk factors (and their metadata) is available for review**
 
@@ -152,7 +156,7 @@ Combining the best of both worlds
 -	The goal is to minimize the difference between the real ranks and calculated ranks for the top 10 ranks.
 -	The variables in the optimization model represent the adjusted similarity scores.
 
-![](Math_Model.png)
+![](Graphics/Math_Model.png)
 
 8.	**Update Baseline Cosine Similarity Matrix**
 

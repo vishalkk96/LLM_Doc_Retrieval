@@ -19,6 +19,18 @@ An end user (employee of a company) describes a specific risk faced by his/her c
 
 ## SOLUTION DESIGN
 
+Risk Factors word count distribution
+
+![](Risks_Words_Count.png)
+
+Drilling down further, the distribution of all the topics (nouns) in the risk factors
+
+![](Risks_Topics_Count.png)
+
+There's a wide variance in the verbosity of the risk factors. It has been observed that verbose risk factors are more likely to be retrieved for a query (false-positives).
+
+A fine-tunable semantic layer is necessary to ensure that the false positives can be mitigated through training.
+
 ![](Retriever_High_Level.png)
 
 ## BI-ENCODER SIMILARITY

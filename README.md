@@ -4,24 +4,18 @@ Voyage-AI LLM embedded document search and BGE reranker
 
 *Reach out to me with any suggestions/questions on LinkedIN* (https://www.linkedin.com/in/vishalkannan/)
 
-Pre-Requisites
-
-The requirements.txt lists all the Python libraries used
-
-pip install -r requirements.txt
-
 ## INTRODUCTION
 
 Organizations across industries collect and author a lot of data in the form of documents. The information in these documents is not leveraged effectively as the employees authoring them often leave the company. Simulating this scenario, an LLM powered retriever is built for risk factors mentioned in public IPO filings (India).
+
+The Risk Factor summary statemtents (in bold and numbered) available in each IPO document are extracted and analyzed
+
+![](Graphics/RF_Text_Extract.png)
 
 ## USE-CASE
 An end user (employee of a company) describes a specific risk faced by his/her company. Out of the risk factors listed in public IPO filings from the past, find the 10 semantically closest risk factors to the one described.
 
 ## SOLUTION DESIGN
-
-The Risk Factor summary statemtents (in bold and numbered) available in each IPO document are extracted and analyzed
-
-![](Graphics/RF_Text_Extract.png)
 
 Risk Factors word count distribution
 

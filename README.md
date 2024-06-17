@@ -23,7 +23,7 @@ Risk Factors word count distribution
 
 ![](Risks_Words_Count.png)
 
-Drilling down further, the distribution of all the topics (nouns) in the risk factors
+Utilizing LDA and drilling down further, the distribution of all the latent topics in the risk factors
 
 ![](Risks_Topics_Count.png)
 

@@ -15,6 +15,14 @@ The Risk Factor summary statemtents (in bold and numbered) available in each IPO
 ## USE-CASE
 An end user (employee of a company) describes a specific risk faced by his/her company. Out of the risk factors listed in public IPO filings from the past, find the 10 semantically closest risk factors to the one described.
 
+## CHALLENGES ADDRESSED
+
+How can we avoid/mitigate false positives (verbose chunks that appear for almost any/all prompts)?
+
+How can we allow manual training by domain experts for the RAG application?
+
+How can we use both bi-encoder cosine similarity and cross-encoder similarity to search through a huge dataset without sacrificing speed or accuracy?
+
 ## SOLUTION DESIGN
 
 Risk Factors word count distribution

@@ -6,9 +6,9 @@ Voyage-AI LLM embedded document search and BGE reranker
 
 ## INTRODUCTION
 
-Organizations across industries collect and author a lot of data in the form of documents. The information in these documents is not leveraged effectively as the employees authoring them often leave the company. Simulating this scenario, an LLM powered retriever is built for risk factors mentioned in public IPO filings (India).
+Organizations across various industries generate and store vast amounts of data in the form of documents. Unfortunately, the valuable information within these documents often goes underutilized, particularly when employees who authored them leave the company. While the information remains valuable, the business context can change over time. To address this, I propose using a convolutional search algorithm enhanced with a predefined semantic context layer to retrieve relevant information in the appropriate context.
 
-The Risk Factor summary statemtents (in bold and numbered) available in each IPO document are extracted and analyzed
+To illustrate this approach, a large language model (LLM)-powered retriever specifically designed to extract risk factors from public IPO filings in India is developed.
 
 ![](Graphics/RF_Text_Extract.png)
 
@@ -35,7 +35,7 @@ Utilizing LDA and drilling down further, the distribution of all the latent topi
 
 There's a wide variance in the verbosity of the risk factors. It has been observed that verbose risk factors are more likely to be retrieved for a query (false-positives).
 
-A fine-tunable semantic layer is necessary to ensure that the false positives can be mitigated through training.
+A convolutional search layer is necessary to ensure that the false positives can be mitigated through training.
 
 ![](Graphics/Retriever_High_Level.png)
 

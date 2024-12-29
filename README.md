@@ -25,15 +25,7 @@ How can we use both bi-encoder cosine similarity and cross-encoder similarity to
 
 ## SOLUTION DESIGN
 
-Risk Factors word count distribution
-
-![](Graphics/Risks_Words_Count.png)
-
-Utilizing LDA and drilling down further, the distribution of all the latent topics in the risk factors
-
-![](Graphics/Risks_Topics_Count.png)
-
-There's a wide variance in the verbosity of the risk factors. It has been observed that verbose risk factors are more likely to be retrieved for a query (false-positives).
+There's a wide variance in the verbosity and topics covered in the risk factors. It has been observed that verbose risk factors are more likely to be retrieved for a query (false-positives).
 
 A convolutional search layer is necessary to ensure that the false positives can be mitigated through training.
 
